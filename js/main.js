@@ -8,7 +8,7 @@ var currentUser;
 
 fetchUser();
 
-document.getElementById("clickButton").addEventListener("click", addClick);
+document.getElementById("clickBtn").addEventListener("click", addClick);
 
 function addClick() {
     currentUser.clicks++;
@@ -38,11 +38,12 @@ function updateUI(){
 //modal behavior 
 
 var modal = document.getElementById("mainModal");
-var closemodalbtn = document.getElementById("closemodalbutton");
-var okButton = document.getElementById("okmodalbutton");
-var cancelButton = document.getElementById("cancelmodalbutton");
+var closeModalBtn = document.getElementById("closeModalBtn");
+var okBtnModal = document.getElementById("okModalBtn");
+var cancelBtnModal = document.getElementById("cancelModalBtn");
+var modalText = document.getElementById("textModal");
 
-closemodalbtn.onclick = function() {
+closeModalBtn.onclick = function() {
   modal.style.display = "none";
 }
 
@@ -52,27 +53,28 @@ window.onclick = function(event) {
   }
 }
 
-okButton.onclick = function() {
-    if(okButton.innerHTML=="delete it"){
+okBtnModal.onclick = function() {
+    if(okBtnModal.innerHTML=="delete it"){
         deleteUser();
     }
 }
 
-cancelButton.onclick = function() {
+cancelBtnModal.onclick = function() {
     modal.style.display = "none";
 }
 
 //delete user
 
-var deleteinfobutton = document.getElementById("deleteinfobutton");
+var deleteinfobtn = document.getElementById("deleteInfoBtn");
 
-deleteinfobutton.onclick = function() {
-    document.getElementById("modal-text").innerHTML= "are you sure you want to delete your information?<br>this will reset all of your data, including your clicks";
+deleteinfobtn.onclick = function() {
+    modalText.innerHTML= "are you sure you want to delete your information?<br>this will reset all of your data, including your clicks";
     modal.style.display = "block";
-    okButton.innerHTML= "delete it";
-    cancelButton.innerHTML="no what the fuck";
+    okBtnModal.innerHTML= "delete it";
+    cancelBtnModal.innerHTML="no what the fuck";
 }
 
 function deleteUser(){
-    window.localStorage.removeItem('user');    
+    window.localStorage.removeItem('user');  
+    location.reload();  
 }

@@ -29,11 +29,11 @@ body {
 
 /* main button clicking */
 
-#mainClickButton {
+#mainClickBtn {
   text-align: center;
 }
 
-#mainClickButton button {
+#mainClickBtn button {
   border: 2px solid var(--palettedark);
   background-color: var(--palettemain);
   color: var(--textcolor);
@@ -45,7 +45,7 @@ body {
   background-color: var(--palettedark);
 }
 
-#mainClickButton button:active {
+#mainClickBtn button:active {
   background-color: var(--paletteaccent);
   color: var(--palettedark);
 }
@@ -125,15 +125,15 @@ li.dropdown {
   width: 50%;
 }
 
-#closemodalbutton {
+#closeModalBtn {
   color: var(--textcolor);
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-#closemodalbutton:hover,
-#closemodalbutton:focus {
+#closeModalBtn:hover,
+#closeModalBtn:focus {
   color: var(--palettedark);
   text-decoration: none;
   cursor: pointer;
