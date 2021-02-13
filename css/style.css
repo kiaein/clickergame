@@ -1,19 +1,153 @@
-body {
-  background-color: rgb(63, 60, 65);
+:root {
+  --font: 20px Lucida Console;
+  --textcolor: white;
+  --back-color: rgb(63, 60, 65);
+  --palettedark: rgb(55, 0, 128); /*darker color*/
+  --palettemain: rgb(110, 18, 231); /*brighter color*/
+  --paletteshadow: rgba(139, 0, 133, 0.486); /*shadows*/
+  --palettetransparent: rgba(24, 1, 54, 0.555); /*transparent color*/
+  --paletteaccent: rgb(255, 0, 170);
 }
-#mainClickButton {
-  width: 50%;
+
+body {
+  background-color: var(--back-color);
+  color: var(--textcolor);
+  font: var(--font);
+}
+
+/* container at the center of the page, where the actions happening */
+
+.main-container {
+  display: flex;
+  width: 50vw;
+  height: 50vh;
   margin: auto;
-  padding: 10px;
+}
+.element {
+  margin: auto;
+}
+
+/* main button clicking */
+
+#mainClickButton {
   text-align: center;
-  color: white;
-  font: 20px Lucida Console;
 }
 
 #mainClickButton button {
-  border: 2px solid rgb(55, 0, 128);
-  background-color: rgb(110, 18, 231);
-  color: white;
-  padding: 20px 40px;
-  font: 20px Lucida Console;
+  border: 2px solid var(--palettedark);
+  background-color: var(--palettemain);
+  color: var(--textcolor);
+  padding: 40px 40px;
+  font: var(--font);
+}
+
+#mainClickButton button:hover {
+  background-color: var(--palettedark);
+}
+
+#mainClickButton button:active {
+  background-color: var(--paletteaccent);
+  color: var(--palettedark);
+}
+
+/* menu shit + dropdown shit*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--palettedark);
+}
+
+li {
+  float: left;
+}
+
+li a,
+.dropbtn {
+  color: var(--textcolor);
+  display: inline-block;
+  text-align: center;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: var(--palettemain);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--palettedark);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px var(--paletteshadow);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--palettedark); /* Fallback color */
+  background-color: var(--palettetransparent); /* transparent w/ opacity */
+}
+
+.modal-content {
+  text-align: center;
+  background-color: var(--palettemain);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--palettedark);
+  width: 50%;
+}
+
+#closemodalbutton {
+  color: var(--textcolor);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#closemodalbutton:hover,
+#closemodalbutton:focus {
+  color: var(--palettedark);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content button {
+  border: 2px solid var(--palettemain);
+  background-color: var(--palettedark);
+  color: var(--textcolor);
+  font: var(--font);
+  width: 30%;
+}
+
+.modal-content button:hover {
+  background-color: var(--paletteaccent);
+  color: var(--palettedark);
 }

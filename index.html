@@ -6,10 +6,32 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="mainClickButton">
+    <div class="menu">
+      <ul>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">setting</a>
+          <div class="dropdown-content">
+            <a href="#" id="deleteinfobutton">delete user information</a>
+          </div>
+        </li>
+      </ul>
+  </div>
+
+  <div id="mainModal" class="modal">
+  <div class="modal-content">
+    <span id="closemodalbutton">&times;</span>
+    <p id="modal-text">something went wrong...</p>
+    <button id="okmodalbutton">yes</button>
+    <button id="cancelmodalbutton">no</button>
+  </div>
+  </div>
+
+  <div class="main-container">
+    <div class="element" id="mainClickButton">
       <div id="clickNbText"></div>
       <button id="clickButton">clicky</button>
     </div>
+  </div>
   </body>
   <script src="js/main.js"></script>
 </html>
