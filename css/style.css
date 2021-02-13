@@ -15,7 +15,22 @@ body {
   font: var(--font);
 }
 
-/* container at the center of the page, where the actions happening */
+button {
+  border: 2px solid var(--palettemain);
+  background-color: var(--palettemain);
+  color: var(--textcolor);
+  font: var(--font);
+}
+
+button:hover {
+  background-color: var(--paletteaccent);
+}
+
+button:active {
+  color: var(--palettedark);
+}
+
+/* containers  */
 
 .main-container {
   display: flex;
@@ -23,6 +38,13 @@ body {
   height: 50vh;
   margin: auto;
 }
+
+.shop-container {
+  width: 100%;
+}
+
+/* things in containers */
+
 .element {
   margin: auto;
 }
@@ -50,7 +72,27 @@ body {
   color: var(--palettedark);
 }
 
+/* shop ! */
+
+#shop {
+  background-color: var(--palettedark);
+  visibility: hidden;
+}
+
+.shop-container .element {
+  display: flex;
+  flex-wrap: wrap;
+}
+.shop-container .element > * {
+  flex: 1 1 160px;
+  margin: 10px;
+}
+.shop-container button {
+  visibility: hidden;
+}
+
 /* menu shit + dropdown shit*/
+
 ul {
   list-style-type: none;
   margin: 0;
