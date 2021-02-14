@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>clikky hehe</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">setting</a>
+          <div class="dropdown-content">
+            <a href="#" id="deleteInfoBtn">delete user information</a>
+          </div>
+        </li>
+      </ul>
+  </div>
+
+  <div id="mainModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModalBtn">&times;</span>
+      <p id="textModal">something went wrong...</p>
+      <button id="okModalBtn">yes</button>
+      <button id="cancelModalBtn">no</button>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="element" id="mainClickBtn">
+      <div id="clickNbText"></div>
+      <button id="clickBtn" onclick="addClick(currentUser.clickLevel)">clicky</button>
+    </div>
+  </div>
+
+  <div class="shop-container">
+    <div class="element" id="shop">
+      <button id="autoClickBtn">auto click</button>
+      <button id="exemple">exemple</button>
+      <button id="exemple">exemple</button>
+      <button id="exemple">exemple</button>
+      <button id="exemple">exemple</button>
+      <button id="exemple">exemple</button>
+      <button id="exemple">exemple</button>
+      <button id="exemple">exemple</button>
+      <button id="exemple">exemple</button>
+      <button id="exemple">exemple</button>
+      <button id="exemple">exemple</button>
+      <button id="exemple">exemple</button>
+    </div>
+  </div>
+
+  </body>
+  <script src="js/main.js"></script>
+</html>
